@@ -51,9 +51,9 @@ function get_pkl_binary_url() {
     URL="$URL/pkl-linux-amd64"
   elif [ "$ARCH" = "aarch64" ] && [ "$OSTYPE" = "linux-gnu" ]; then
     URL="$URL/pkl-linux-aarch64"
-  elif [ "$ARCH" = "x86_64" ] && [ "$OSTYPE" = "darwin" ]; then
+  elif [ "$ARCH" = "x86_64" ] && [[ "$OSTYPE" = *"darwin"* ]]; then
     URL="$URL/pkl-macos-amd64"
-  elif [ "$ARCH" = "aarch64" ] && [ "$OSTYPE" = "darwin" ]; then
+  elif [ "$ARCH" = "aarch64" ] && [[ "$OSTYPE" = *"darwin"* ]]; then
     URL="$URL/pkl-macos-aarch64"
   elif [ "$ARCH" = "x86_64" ] && [ "$OSTYPE" = "alpine" ]; then
     URL="$URL/pkl-alpine-linux-amd64"
